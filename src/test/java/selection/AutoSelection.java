@@ -17,6 +17,7 @@ public class AutoSelection {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		driver.get("http://leafground.com");
+		driver.manage().window().maximize();
 		WebElement autoComplete = driver.findElement(By.xpath("//img[@alt='Auto Complete']"));
 		autoComplete.click();
 		
@@ -38,7 +39,7 @@ public class AutoSelection {
 			
 		}
 		
-		
+		driver.quit();
 	}
 
 }
