@@ -1,6 +1,6 @@
 package selection;
 
-import java.time.Duration;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -31,9 +31,15 @@ public class AutoSelection {
 		for (WebElement course : listOfCourses) {
 			String courseSelected=course.getText();
 			if(courseSelected.equals("Rest API")) {
+				System.out.println(courseSelected);
 				course.click();
 				String val=textBox.getAttribute("value");
 				System.out.println(val);
+				if(courseSelected.equals(val)) {
+					System.out.println("True");
+				}else {
+					System.out.println("False");
+				}
 			}
 			
 			
